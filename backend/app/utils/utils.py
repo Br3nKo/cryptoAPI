@@ -6,7 +6,6 @@ def get_url():
 
 
 def coingecko_map_result(coin, market_data):
-    print(coin)
     mapped_coin = {
         "id": coin.get('id'),
         "symbol": coin.get('symbol'),
