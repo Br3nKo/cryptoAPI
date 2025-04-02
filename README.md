@@ -23,6 +23,8 @@ The frontend is yet to be fully implemented, therefore use backend Openapi to ca
 ### Backend:
 - error handling (add error codes and messages)
 - auth
+- unify typing
+- comments and documentation
 ### Frontend:
 - everything :)
 - had no time to implement, will certainly do later
