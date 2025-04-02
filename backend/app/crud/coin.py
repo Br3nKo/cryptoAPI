@@ -8,6 +8,7 @@ from utils.utils import update_db_coin
 
 
 async def create_coin_by_symbol_and_name(symbol: str, name: str, db: AsyncSession):
+    """ Creates new Coin in the db """
     try:
         coingecko_response = await gecko_coin_exists(symbol, name)
 
@@ -30,6 +31,7 @@ async def create_coin_by_symbol_and_name(symbol: str, name: str, db: AsyncSessio
 
 
 async def get_coin_by_id(id: str, db: AsyncSession):
+    """ Retrieves a Coin from db by ID """
     coin = (await db.scalars(select(Coin).where(Coin.id == id))).first()
 
     if not coin:
@@ -39,11 +41,13 @@ async def get_coin_by_id(id: str, db: AsyncSession):
 
 
 async def get_all_coins(db: AsyncSession):
+    """ Retrieves all Coins from db """
     coins = (await db.scalars(select(Coin))).all()
     return coins
 
 
 async def update_coin_by_id(id: str, db: AsyncSession):
+    """ Updates a Coin in db by ID """
     db_coin = (await db.scalars(select(Coin).where(Coin.id == id))).first()
 
     if not db_coin:
@@ -86,6 +90,7 @@ async def update_all_coins(db: AsyncSession):
 
 
 async def delete_coin_by_id(id: str, db: AsyncSession):
+    """ Deletes a Coin from db by ID """
     db_coin = (await db.scalars(select(Coin).where(Coin.id == id))).first()
 
     if not db_coin:
