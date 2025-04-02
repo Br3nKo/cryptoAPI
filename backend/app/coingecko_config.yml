@@ -1,0 +1,5 @@
+coingecko:
+  coin_exists_url: "https://api.coingecko.com/api/v3/coins/markets"
+  get_coin_url: "https://api.coingecko.com/api/v3/coins/"
+  get_coin_url_query: "?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false"
+  vs_currency: "eur"

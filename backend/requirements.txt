@@ -1,0 +1,10 @@
+fastapi[all]
+uvicorn[standard]
+sqlalchemy>=2.0.0
+asyncpg
+redis
+httpx
+python-dotenv
+requests
+alembic
+apscheduler
